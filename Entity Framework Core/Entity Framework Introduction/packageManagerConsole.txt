@@ -1,0 +1,1 @@
+scaffold-dbcontext 'Server=DESKTOP-7ITDFKN\SQLEXPRESS;Database=SoftUni;Integrated Security=true;Trust Server Certificate=true' Microsoft.EntityFrameworkCore.SqlServer -DataAnnotations -ContextDir Data -OutputDir Models
