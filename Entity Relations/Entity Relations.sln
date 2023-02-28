@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entity Relations", "Entity Relations\Entity Relations.csproj", "{9E5013DA-F3D0-4F1E-B698-2504660C90CD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P01_StudentSystem", "P01_StudentSystem\P01_StudentSystem.csproj", "{905B49D9-9FE2-4D9B-B1A4-2EE4F8DAD68E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "P02_FootballBetting", "P02_FootballBetting", "{84072DF1-CB48-4827-AF8E-0D3362CC8C03}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P02_FootballBetting", "P02_FootballBetting\P02_FootballBetting.csproj", "{2EFC4BEC-3A0E-498B-9340-E63DCE26F972}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P02_FootballBetting.Data", "P02_FootballBetting.Data\P02_FootballBetting.Data.csproj", "{9CD494C4-CAFC-4773-8C46-D8D4E0AF81B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P02_FootballBetting.Data.Common", "P02_FootballBetting.Data.Common\P02_FootballBetting.Data.Common.csproj", "{F372ED53-808E-45B2-963F-1721CEB42AAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P02_FootballBetting.Data.Models", "P02_FootballBetting.Data.Models\P02_FootballBetting.Data.Models.csproj", "{52ECFE7C-B8EF-4112-AC08-4C94F7C6B721}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9E5013DA-F3D0-4F1E-B698-2504660C90CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E5013DA-F3D0-4F1E-B698-2504660C90CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E5013DA-F3D0-4F1E-B698-2504660C90CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E5013DA-F3D0-4F1E-B698-2504660C90CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{905B49D9-9FE2-4D9B-B1A4-2EE4F8DAD68E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{905B49D9-9FE2-4D9B-B1A4-2EE4F8DAD68E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{905B49D9-9FE2-4D9B-B1A4-2EE4F8DAD68E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{905B49D9-9FE2-4D9B-B1A4-2EE4F8DAD68E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EFC4BEC-3A0E-498B-9340-E63DCE26F972}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EFC4BEC-3A0E-498B-9340-E63DCE26F972}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EFC4BEC-3A0E-498B-9340-E63DCE26F972}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EFC4BEC-3A0E-498B-9340-E63DCE26F972}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CD494C4-CAFC-4773-8C46-D8D4E0AF81B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CD494C4-CAFC-4773-8C46-D8D4E0AF81B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CD494C4-CAFC-4773-8C46-D8D4E0AF81B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CD494C4-CAFC-4773-8C46-D8D4E0AF81B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F372ED53-808E-45B2-963F-1721CEB42AAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F372ED53-808E-45B2-963F-1721CEB42AAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F372ED53-808E-45B2-963F-1721CEB42AAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F372ED53-808E-45B2-963F-1721CEB42AAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52ECFE7C-B8EF-4112-AC08-4C94F7C6B721}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52ECFE7C-B8EF-4112-AC08-4C94F7C6B721}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52ECFE7C-B8EF-4112-AC08-4C94F7C6B721}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52ECFE7C-B8EF-4112-AC08-4C94F7C6B721}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2EFC4BEC-3A0E-498B-9340-E63DCE26F972} = {84072DF1-CB48-4827-AF8E-0D3362CC8C03}
+		{9CD494C4-CAFC-4773-8C46-D8D4E0AF81B9} = {84072DF1-CB48-4827-AF8E-0D3362CC8C03}
+		{F372ED53-808E-45B2-963F-1721CEB42AAD} = {84072DF1-CB48-4827-AF8E-0D3362CC8C03}
+		{52ECFE7C-B8EF-4112-AC08-4C94F7C6B721} = {84072DF1-CB48-4827-AF8E-0D3362CC8C03}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BD654941-6005-445A-B3A8-DDAFAC79716C}
+	EndGlobalSection
+EndGlobal
