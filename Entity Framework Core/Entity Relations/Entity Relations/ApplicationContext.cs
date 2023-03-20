@@ -18,7 +18,7 @@ namespace Entity_Relations
             if (!optionsBuilder.IsConfigured)
             {
                 optionsBuilder.UseSqlServer(
-                    @"Data Source=DESKTOP-7ITDFKN\SQLExpress;Database=SoftUniDemo;Integrated Security=True;Trust Server Certificate=true");
+                    @"Data Source=.;Database=SoftUniDemo;Integrated Security=True;Trust Server Certificate=true");
             }
         }
 

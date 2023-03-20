@@ -1,6 +1,6 @@
 ﻿using Microsoft.Data.SqlClient;
 
-SqlConnection connection = new SqlConnection("Server=DESKTOP-7ITDFKN\\SQLEXPRESS;Database=SoftUni;Integrated Security=true;Trust Server Certificate=true");
+SqlConnection connection = new SqlConnection("Server=.;Database=SoftUni;Integrated Security=true;Trust Server Certificate=true");
 connection.Open();
 
 using (connection)

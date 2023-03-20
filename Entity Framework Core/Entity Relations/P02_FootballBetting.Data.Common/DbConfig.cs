@@ -2,5 +2,5 @@
 public static class DbConfig
 {
     public const string ConnectionString =
-        @"Server=DESKTOP-7ITDFKN\SQLEXPRESS;Database=FootballBookmakerSystem;Integrated Security=true;Trust Server Certificate=true";
+        @"Server=.;Database=FootballBookmakerSystem;Integrated Security=true;Trust Server Certificate=true";
 }

@@ -30,7 +30,7 @@ public partial class SoftUniContext : DbContext
     {
         if (!optionsBuilder.IsConfigured)
         {
-            optionsBuilder.UseSqlServer("Server=DESKTOP-7ITDFKN\\SQLEXPRESS;Database=SoftUni;Integrated Security=true;Trust Server Certificate=true");
+            optionsBuilder.UseSqlServer("Server=.;Database=SoftUni;Integrated Security=true;Trust Server Certificate=true");
         }
     }
 
