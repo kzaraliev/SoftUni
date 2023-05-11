@@ -1,0 +1,17 @@
+#wrapper {
+    color: #95191a;
+    background-color: #dddddd;
+    width: 300px;
+    border: 1px solid #000000;
+}
+
+.container{
+    background: #dddddd;
+    width: 300px;
+    border: 1px solid #000000;
+ 
+}
+ 
+.container ol{
+    color: #95191a;
+}
