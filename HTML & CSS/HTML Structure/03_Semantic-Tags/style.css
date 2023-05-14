@@ -1,0 +1,18 @@
+body{
+    background-color: #f9f7cf;
+    width: 480px;
+}
+
+body > header{
+    background-color: #f2dcbb;
+    padding: 15px;
+}
+
+body > main{
+    padding: 5px;
+}
+
+body > footer{
+    background-color: #f2dcbb;
+    padding: 15px;
+}
