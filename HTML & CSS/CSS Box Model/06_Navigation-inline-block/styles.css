@@ -1,0 +1,28 @@
+html {
+    font-family: Helvetica, sans-serif;
+    padding: 3em;
+}
+
+header{
+    border-bottom: 2px solid black;
+}
+
+nav{
+    display: inline-block;
+}
+
+h1 {
+    float: left;
+}
+
+li {
+    margin: 10px;
+    list-style-type: none;
+    display: inline-block;
+}
+
+
+a {
+    color: green;
+    text-decoration: none;
+}

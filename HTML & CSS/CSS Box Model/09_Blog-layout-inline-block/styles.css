@@ -1,0 +1,27 @@
+*{
+    font-family: Helvetica, sans-serif;
+    background-color: rgb(238, 238, 238);
+    color: rgb(51, 51, 51);
+    margin: 10px;
+    line-height: 1.4;
+}
+
+article{
+    width: 70%;
+    display: inline-block;
+}
+
+header{
+    margin-bottom: 40px;
+}
+
+img{
+    width: 40%;
+}
+
+aside{
+    width: 20%;
+    display: inline-block;
+    position: inherit;
+    vertical-align: top;
+}
