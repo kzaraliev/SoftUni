@@ -1,0 +1,56 @@
+body {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+div.page{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+body{
+    background-color: rgb(238, 238, 238);
+}
+
+img{
+    background-color: rgb(255, 255, 255);
+}
+
+blockquote{
+    font-family: Georgia, serif;
+    display: inline-block;
+}
+
+a{
+    color: rgb(0, 153, 0);
+}
+
+h1, h2, h3{
+    font-family: Georgia, serif;
+}
+
+h1{
+    text-transform: uppercase;
+}
+
+header{
+    border-bottom: 1px solid black;
+}
+
+img{
+    justify-content: flex-end;
+}
+
+aside{
+    position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #f5f5f5;
+  color: #333;
+  padding: 10px;
+  font-weight: bold;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}

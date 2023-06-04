@@ -1,0 +1,31 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: rgb(238, 238, 238);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+section.container{
+    display: flex;
+    gap: 2em;
+}
+
+img{
+    width: 100px;
+    height: 300px;
+    object-fit: none;
+    border-radius: 10px;
+    box-shadow: 0 0 20px black;
+}
+
+img.img-2{
+    width: 60%;
+    height: 300px;
+}
