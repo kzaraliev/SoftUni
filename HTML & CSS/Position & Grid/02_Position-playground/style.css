@@ -1,0 +1,47 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 0px;
+    font-size: 0px;
+}
+
+.viewpoint{
+    margin: 0px;
+    height: 50vh;
+    position: relative;
+}
+
+.viewpoint.first{
+    background: linear-gradient(to right, rgb(0, 17, 255) , rgb(0, 255, 234));
+}
+
+.viewpoint.second {
+    background-image: linear-gradient(to right, rgb(153, 0, 153) , rgb(255, 117, 26));
+}
+
+.card{
+    display: block;
+    width: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card img{
+    width: 100%;
+}
+
+.card i {
+    color: white;
+    font-size: 16px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
