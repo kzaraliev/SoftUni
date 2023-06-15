@@ -1,0 +1,64 @@
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+h1{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+p{
+    font-size: 16px;
+}
+
+.card{
+    max-width: 1300px;
+    margin: 40px auto;
+    display: flex;
+    height: 600;
+}
+
+.content{
+    max-width: 50%;
+    margin-right: 30px;
+    height: 600px;
+    font-size: 14px;
+}
+
+.content p{
+    margin-bottom: 12px;
+    color: #828282;
+}
+
+.desc{
+    margin-bottom: 40px;
+}
+
+.badge{
+    display: flex;
+    margin: 18px 0;
+}
+
+.badge img{
+    width: 60px;
+    align-self: center;
+    padding-right: 16px;
+    position: relative;
+    bottom: 9px;
+}
+
+.badge-text h1, p{
+    margin: 0;
+}
+
+.car{
+    align-self: flex-end;
+    position: relative;
+    bottom: 55px;
+}
+
+.car img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

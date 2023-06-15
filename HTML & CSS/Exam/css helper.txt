@@ -1,0 +1,46 @@
+.card{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+------> center item in the middle of the page
+
+
+.photo{
+    display: block;
+}
+
+.photo img{
+    width: 100%;
+    height: auto;
+}
+------> make image fill in certain container
+
+
+.item{
+    float: right;
+}
+------> align item to the given position
+
+
+.item{
+    box-shadow: 5px 5px 5px #aaaaaa;
+}
+------> cool box-shadow
+
+
+nav{
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 8px;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline;
+}
+------> ul for Home About More (next to the title vertically align)
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css"/>
+------> link for fontawesome
