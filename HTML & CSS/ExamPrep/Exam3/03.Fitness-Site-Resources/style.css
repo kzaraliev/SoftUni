@@ -1,0 +1,161 @@
+body{
+    background: url(image/fitness-main.jpg);
+    background-size: 100% auto;
+    background-position: center -250px;
+    background-repeat: no-repeat;
+    margin: 0px;
+}
+
+.site{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.top{
+    background: #d01919;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 32px;
+    color: white;
+    padding: 18px 16px;
+}   
+
+.top div{
+    display: flex;
+    justify-content: space-evenly;
+    width: 200px;
+}
+
+nav{
+    vertical-align: middle;
+    margin-top: 8px;
+    width: 800px;
+    margin-right: 24px;
+    align-self: self-end;
+    color: white;    
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline;
+    letter-spacing: 0.5px;
+}
+
+.title{
+    font-size: 42px;
+    letter-spacing: 12px;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    margin-top: 38px;
+    padding-bottom: 72px;
+    height: 380px;
+}
+
+header > p{
+    width: 440px;
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+}
+
+header > button{
+    background: #d01919;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    margin-top: 12px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.welcome{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    padding-bottom: 72px;
+}
+
+h2{
+    font-size: 38px;
+}
+
+.horizontal-line1{
+    border: 1px solid #d01919;
+    width: 82px;
+    height: 2px;
+    background:#d01919;
+    margin-bottom: 28px;
+}
+
+.card{
+    width: 400px;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+}
+
+.card-title{
+    color: #d2222b;
+    margin-bottom: 0px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.card > p{
+    text-align: center;
+    width: 350px;
+}
+
+.icon{
+    display: block;
+    border-radius: 4px;
+    width: 20%;
+}
+
+.posters{
+    display: flex;
+    gap: 32px;
+}
+
+.coaches{
+    background-color: #efefef;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 42px;
+}
+
+.photo-desc{
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+.desc{
+    color: #aaa5a9;
+}
+
+footer{
+    background: #d01919;
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
