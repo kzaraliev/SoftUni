@@ -1,0 +1,73 @@
+body{
+    background-color: #d9d9d9;
+    font-family: 'Inter', sans-serif;
+}
+
+section{
+    display: flex;
+    gap: 32px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card{
+    background-color: #d9d9d9;
+    width: 400px;
+    box-shadow: 15px 15px 15px #a0a0a0;
+}
+
+img{
+    display: block;
+    width: 100%;
+    height: 250px;
+}
+
+.text-content{
+    margin: 24px 24px;
+}
+
+.info{
+    display: flex;
+    border-top: 1px solid black;
+    padding-top: 12px;
+}
+
+.info img{
+    display: block;
+    border-radius: 360px;
+    overflow: hidden;
+}
+
+.men{
+    width: 45px;
+    height: 45px;
+    margin-right: 12px;
+    position: relative;
+    top: 4px;
+}
+
+.name{
+    margin-right: 100px;
+    width: 100px;
+}
+
+.subtitle{
+    color: #595959;
+    font-weight: bold;
+}
+
+.text-content > h1{
+    font-weight: normal;
+    color: #262830;
+}
+
+.desc{
+    color: #696c6e;
+}
+
+.date{
+    color: #9d9d9d;
+    width: 100px;
+}

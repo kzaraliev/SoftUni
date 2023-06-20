@@ -1,0 +1,257 @@
+body{
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+}
+
+.top{
+    margin: 24px 170px;
+}
+
+nav{
+    display: inline-block;
+    vertical-align: middle;
+    width: 500px;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline;
+    cursor: pointer;
+}
+
+.button{
+    border: none;
+    border-radius: 8px;
+    padding: 20px 44px;
+    cursor: pointer;
+}
+
+.button.sign, .button.log{
+
+    float: right;
+}
+
+.button.green{
+    background-color: #ade2df;
+}
+
+.button.sign{
+    background-color: white;
+}
+
+.section-green{
+    background-color: #ade2df;
+}
+
+header{
+    padding: 32px 32px;
+    text-align: center;
+}
+
+header > h1{
+    font-size: 60px;
+    margin-bottom: 0px;
+}
+
+.button.download{
+    margin-top: 18px;
+    background-color: black;
+    color: white;
+    margin-bottom: 28px;
+}
+
+.section-white{
+    display: flex;   
+    margin: 12px 150px;
+    justify-content: space-around;
+    padding: 100px 0;
+}
+
+.mini-card{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 300px;
+}
+
+.mini-card > h2{
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+
+.vertical-line{
+    border: 2px solid #dbdbdb;    
+    height: 200px;
+}
+
+.vertical-line-light{
+    border: 1px solid #dbdbdb;
+    border-collapse: collapse;
+    background-color: wheat;
+}
+
+.content{
+    display: flex;
+    gap: 120px;
+    margin: 0 420px;
+}
+
+.content > img{
+    border: 2px dashed #98b8b6;
+}
+
+.desc{
+    font-size: 18px;
+    width: 800px;
+    margin-top: 64px;
+    line-height: 28px;
+}
+
+.desc > h2{
+    font-size: 52px;
+    line-height: 64px;
+}
+
+.underline{
+    border-bottom: 1px solid black;
+    width: 200px;
+    margin-top: 48px;
+    cursor: pointer;
+}
+
+.section-grey{
+    background-color: #f3f5fa;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 64px;
+    padding-bottom: 64px;
+    margin-bottom: 0;
+}
+
+ul{
+    list-style: none;
+}
+
+.pricing{
+    align-self: center;
+    width: 110px;
+    padding: 6px 6px;
+    font-size: 16px;
+}
+
+.section-grey > h2{
+    font-size: 44px;
+}
+
+.card-conteiner{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    border-radius: 12px;
+    gap: 32px;
+}
+
+.card{
+    text-align: start;
+    padding: 24px 32px;
+    width: 300px;
+}
+
+.card > h3{
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.subtitle{
+    margin-top: 2px;
+}
+
+.accent{
+    font-weight: bold;
+    font-size: 48px;
+}
+
+.card > ul{
+    border-top: 2px solid #dbdbdb;
+    padding: 0;
+    line-height: 38px;
+}
+
+.price{
+    margin: 24px 0;
+}
+
+.vertical-line-light-card{
+    border: 1px solid #dbdbdb;
+    height: 450px;
+    position: relative;
+    top: 30px;
+}
+
+.card-green{
+    background-color: #ade2df;
+    text-align: start;
+    padding: 24px 32px;
+    width: 600px;
+    border-radius: 0 12px 12px 0;
+}
+
+.card-green > ul{
+    padding: 0;
+    margin-top: 42px;
+    margin-bottom: 32px;
+}
+
+.card-green > h3{
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.card-green > p{
+    margin-top: 0;
+    font-size: 22px;
+}
+
+.contact{
+    background-color: black;
+    color: white;
+    padding-left: 260px;
+    padding-right: 260px;
+    float: center;
+    margin-top: 170px;
+}
+
+.end{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 64px 24px;
+}
+
+.end h1{
+    font-size: 60px;
+    margin-bottom: 0;
+}
+
+.end p{
+    margin-top: 2px;
+}
+
+.apple{
+    margin-right: 12px;
+}
+
+footer{
+    padding: 24px 28px;
+    text-align: end;
+}
+
+.copyright{
+    float: left;
+}
