@@ -1,0 +1,10 @@
+1. Add a slider that indicates how many of the total number of gates the player passes. Change the default image resource of the slider with sprites provided in "Assets/Textures/HUD.png". Keep the counter text. For reference see the "Assets/Example.mkv".
+2. Change timer from slider to filled type image. Use the "Assets/Textures/Timer.png" asset. For reference see the "Assets/Example.mkv".
+3. Rework the gates. 
+	a. Disable the left and the right beams' renderers. Keep the colliders.
+	b. Place Flame Stream from "Assets/ParticleSystems/FlameStream.prefab" on the beams's place. Fix the ParticleSystem component's properties as you like.
+	c. Place the flames on the beams' places and "curve" the fire to produce a shape like an arc.
+4. Duplicate the reworked gate at least 4 times in a random location through the editor.
+5. The first gate flames will emit at play state. Stop the emitting to all other gates.
+6. When the player (plane) crosses the current gate, stop its flames and ignite the next gate flames. For reference see the "Assets/Example.mkv".
+Warning: Before send the homework delete "Assets/Example.mkv".

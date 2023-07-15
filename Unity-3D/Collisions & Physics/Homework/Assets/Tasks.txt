@@ -1,0 +1,8 @@
+1. Rework the script ItemDropper.cs file to work with rigidbody. Don't forget to attach rigidbody and collider to the crate template. Remove redundant ItemFalling.cs component from the project and its usages. 
+2. Add rigidbody to the plane. Change the movement and rotation to be with rigidbody's AddRelativeForce() and AddRelativeTorque() methods.
+4. Create a gate to passes with the plane (see the image "Gate.png" sibling to that file).
+3. Create a script called ColliderDetector.cs and implement the "OnTriggerEnter" method which will detect when to pass the gate then log in to the console "Gate passed!".
+4. In ColliderDetector.cs implement the "OnCollisionEnter" method which will detect when the plane crash on the side of the gate then logs in the console "Plane crashed! Game Over".
+5. (Hard) Raycast forward from the plane. When hitting any collider in the world print in the console "Did Hit {name of the object}". Do that on the "Update" method.
+You can use that code for help with that task https://docs.unity3d.com/ScriptReference/Physics.Raycast.html and https://youtu.be/USwrSUpIgLI
+Important! You can see the result from "Debug.DrawRay" only in the Scene window. Cannot see it inside the Game window.
