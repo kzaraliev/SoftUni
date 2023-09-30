@@ -5,11 +5,11 @@ namespace Tree
     using System;
     using System.Collections.Generic;
 
-    public class IntegerTreeFactory
+    public class TreeFactory
     {
         private Dictionary<int, IntegerTree> nodesByKey;
 
-        public IntegerTreeFactory()
+        public TreeFactory()
         {
             this.nodesByKey = new Dictionary<int, IntegerTree>();
         }

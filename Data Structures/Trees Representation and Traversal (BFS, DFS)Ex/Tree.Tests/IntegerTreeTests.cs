@@ -26,7 +26,7 @@
                 "14 6"
             };
 
-            this.tree = new IntegerTreeFactory().CreateTreeFromStrings(input);
+            this.tree = new TreeFactory().CreateTreeFromStrings(input);
         }
 
         [Test]
