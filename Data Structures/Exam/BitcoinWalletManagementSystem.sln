@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitcoinWalletManagementSystem", "BitcoinWalletManagementSystem\BitcoinWalletManagementSystem.csproj", "{AF6435EC-82E3-45E6-BFA7-AAA6C18A2596}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitcoinWalletManagementSystem.Tests", "BitcoinWalletManagementSystem.Tests\BitcoinWalletManagementSystem.Tests.csproj", "{581E2A6E-69B1-4BAE-9B60-9EEED917B005}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF6435EC-82E3-45E6-BFA7-AAA6C18A2596}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF6435EC-82E3-45E6-BFA7-AAA6C18A2596}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF6435EC-82E3-45E6-BFA7-AAA6C18A2596}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF6435EC-82E3-45E6-BFA7-AAA6C18A2596}.Release|Any CPU.Build.0 = Release|Any CPU
+		{581E2A6E-69B1-4BAE-9B60-9EEED917B005}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{581E2A6E-69B1-4BAE-9B60-9EEED917B005}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{581E2A6E-69B1-4BAE-9B60-9EEED917B005}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{581E2A6E-69B1-4BAE-9B60-9EEED917B005}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
