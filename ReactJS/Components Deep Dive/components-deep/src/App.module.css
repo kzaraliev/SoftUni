@@ -1,0 +1,12 @@
+.listItem {
+  list-style-type: none;
+  display: inline;
+  margin-left: 10px;
+  background-color: aqua;
+  padding: 10px;
+}
+
+.listItem:hover {
+  background-color: aquamarine;
+  cursor: pointer;
+}
