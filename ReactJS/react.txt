@@ -1,2 +1,3 @@
 npm create vite components-basics -- --template react
 code . (start vs code)
+npm i react-router-dom
