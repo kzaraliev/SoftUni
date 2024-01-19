@@ -1,0 +1,21 @@
+﻿@model ProductViewModel
+@{
+    ViewData["Title"] = $"Product {Model.Name}";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<div class="row">
+    <div class="col-4">
+        <div class="card">
+            <div class="card-header">Product N.@Model.Id</div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <h3>Product Name: @Model.Name</h3>
+                    Price: @Model.Price lv.
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+

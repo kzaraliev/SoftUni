@@ -1,0 +1,25 @@
+﻿@model IEnumerable<ProductViewModel>
+
+@{
+    ViewData["Title"] = "All Products";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<span class="text-danger">@TempData["Error"]</span>
+
+<div class="row">
+    <div class="col-2">
+        <div class="card">
+            <div class="card-header">@ViewData["Title"]</div>
+            <ul class="list-group list-group-flush">
+                @foreach (var item in Model)
+                {
+                    <li class="list-group-item">
+                        <a asp-action="ById" asp-route-id="@item.Id"> N.@item.Id: @item.Name - @item.Price lv. </a>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+</div>
