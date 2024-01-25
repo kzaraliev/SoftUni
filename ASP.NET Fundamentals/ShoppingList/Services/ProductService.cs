@@ -1,5 +1,7 @@
-﻿using ShoppingList.Contracts;
+﻿using Microsoft.EntityFrameworkCore;
+using ShoppingList.Contracts;
 using ShoppingList.Data;
+using ShoppingList.Data.Models;
 using ShoppingList.Models;
 
 namespace ShoppingList.Services
@@ -13,29 +15,73 @@ namespace ShoppingList.Services
             context = _context;
         }
 
-        public Task AddProductAsync(ProductViewModel model)
+        public async Task AddProductAsync(ProductViewModel model)
         {
-            throw new NotImplementedException();
+            var entity = new Product()
+            {
+                Name = model.Name,
+            };
+
+            await context.Products.AddAsync(entity);
+            await context.SaveChangesAsync();
         }
 
-        public Task DeleteProductAsync(int id)
+        public async Task DeleteProductAsync(int id)
         {
-            throw new NotImplementedException();
+            var entity = await context.Products
+                .FindAsync(id);
+
+            if (entity == null)
+            {
+                throw new NullReferenceException("Invalid product");
+            }
+
+            context.Products.Remove(entity);
+            await context.SaveChangesAsync();
         }
 
-        public Task<IEnumerable<ProductViewModel>> GetAllAsync()
+        public async Task<IEnumerable<ProductViewModel>> GetAllAsync()
         {
-            throw new NotImplementedException();
+            return await context.Products
+                .AsNoTracking()
+                .Select(p => new ProductViewModel()
+                {
+                    Id = p.Id,
+                    Name = p.Name,
+                })
+                .ToListAsync();
         }
 
-        public Task<ProductViewModel> GetByIdAsync(int id)
+        public async Task<ProductViewModel> GetByIdAsync(int id)
         {
-            throw new NotImplementedException();
+            var entity = await context.Products
+                .FindAsync(id);
+
+            if (entity == null)
+            {
+                throw new NullReferenceException("Invalid product");
+            }
+
+            return new ProductViewModel()
+            {
+                Id = id,
+                Name = entity.Name,
+            };
         }
 
-        public Task UpdateProductAsync(ProductViewModel model)
+        public async Task UpdateProductAsync(ProductViewModel model)
         {
-            throw new NotImplementedException();
+            var entity = await context.Products
+                .FindAsync(model.Id);
+
+            if (entity == null)
+            {
+                throw new NullReferenceException("Invalid product");
+            }
+
+            entity.Name = model.Name;
+
+            await context.SaveChangesAsync();
         }
     }
 }
