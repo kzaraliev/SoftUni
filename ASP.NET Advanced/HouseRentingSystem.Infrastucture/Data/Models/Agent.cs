@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace HouseRentingSystem.Infrastucture.Data.Models
 {
+    [Index(nameof(PhoneNumber), IsUnique = true)]
     [Comment("House Agent")]
     public class Agent
     {
