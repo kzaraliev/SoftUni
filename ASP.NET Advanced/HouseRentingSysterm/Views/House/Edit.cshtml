@@ -1,7 +1,13 @@
 ﻿@model HouseFormModel
 @{
-    ViewBag["Title"] = "Edit Houses";
+    ViewBag.Title = "Edit Houses";
 }
 
 <h2 class="text-center">@ViewData["Title"]</h2>
 <hr />
+
+<partial name="_HouseFormPartial" model="@Model" />
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

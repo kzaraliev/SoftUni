@@ -21,16 +21,38 @@ namespace HouseRentingSysterm.Controllers
 
         [AllowAnonymous]
         [HttpGet]
-        public async Task<IActionResult> All()
+        public async Task<IActionResult> All([FromQuery] AllHousesQueryModel query)
         {
-            var model = new AllHousesQueryModel();
-            return View(model);
+            var model = await houseService.AllAsync(
+                query.Category,
+                query.SearchTerm,
+                query.Sorting,
+                query.CurrentPage,
+                query.HousesPerPage
+                );
+            
+            query.TotalHousesCount = model.TotalHousesCount;
+            query.Houses = model.Houses;
+            query.Categories = await houseService.AllCategoryNamesAsync();
+
+            return View(query);
         }
 
         [HttpGet]
         public async Task<IActionResult> Mine()
         {
-            var model = new AllHousesQueryModel();
+            var userId = User.Id();
+            IEnumerable<HouseServiceModel> model;
+
+            if (await agentService.ExistsByIdAsync(userId))
+            {
+                int agentId = await agentService.GetAgentIdAsync(userId) ?? 0;
+                model = await houseService.AllHouseByAgentIdAsync(agentId);
+            }
+            else
+            {
+                model = await houseService.AllHousesByUserIdAsync(userId);
+            }
 
             return View(model);
         }
@@ -38,7 +60,12 @@ namespace HouseRentingSysterm.Controllers
         [HttpGet]
         public async Task<IActionResult> Details(int id)
         {
-            var model = new HouseDetailsViewModel();
+            if (await houseService.ExistAsync(id) == false)
+            {
+                return BadRequest();
+            }
+
+            var model  = await houseService.HouseDetailsByIdAsync(id);
 
             return View(model);
         }
@@ -61,7 +88,7 @@ namespace HouseRentingSysterm.Controllers
         {
             if (await houseService.CategoryExistsAsync(model.CategoryId) == false)
             {
-                ModelState.AddModelError(nameof(model.CategoryId), "");
+                ModelState.AddModelError(nameof(model.CategoryId), "Category desn not exist");
             }
 
             if (ModelState.IsValid == false)
@@ -75,13 +102,23 @@ namespace HouseRentingSysterm.Controllers
 
             int newHouseId = await houseService.CreateAsync(model, agentId ?? 0);
 
-            return RedirectToAction(nameof(Details), new {id = newHouseId});
+            return RedirectToAction(nameof(Details), new { id = newHouseId });
         }
 
         [HttpGet]
         public async Task<IActionResult> Edit(int id)
         {
-            var model = new HouseFormModel();
+            if (await houseService.ExistAsync(id) == false)
+            {
+                return BadRequest();
+            }
+
+            if (await houseService.HasAgentWithIdAsync(id, User.Id()) == false)
+            {
+                return Unauthorized();
+            }
+
+            var model = await houseService.GetHouseFormModelModelByIdAsync(id);
 
             return View(model);
         }
@@ -89,7 +126,31 @@ namespace HouseRentingSysterm.Controllers
         [HttpPost]
         public async Task<IActionResult> Edit(int id, HouseFormModel model)
         {
-            return RedirectToAction(nameof(Details), new { id = 1 });
+            if (await houseService.ExistAsync(id) == false)
+            {
+                return BadRequest();
+            }
+
+            if (await houseService.HasAgentWithIdAsync(id, User.Id()) == false)
+            {
+                return Unauthorized();
+            }
+
+            if (await houseService.CategoryExistsAsync(model.CategoryId) == false)
+            {
+                ModelState.AddModelError(nameof(model.CategoryId), "Category desn not exist");
+            }
+
+            if (ModelState.IsValid == false)
+            {
+                model.Categories = await houseService.AllCategoriesAsync();
+
+                return View(model);
+            }
+
+            await houseService.EditAsync(id, model);
+
+            return RedirectToAction(nameof(Details), new { id });
         }
 
         [HttpGet]
