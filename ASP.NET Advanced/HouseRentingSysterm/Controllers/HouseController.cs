@@ -30,7 +30,7 @@ namespace HouseRentingSysterm.Controllers
                 query.CurrentPage,
                 query.HousesPerPage
                 );
-            
+
             query.TotalHousesCount = model.TotalHousesCount;
             query.Houses = model.Houses;
             query.Categories = await houseService.AllCategoryNamesAsync();
@@ -65,7 +65,7 @@ namespace HouseRentingSysterm.Controllers
                 return BadRequest();
             }
 
-            var model  = await houseService.HouseDetailsByIdAsync(id);
+            var model = await houseService.HouseDetailsByIdAsync(id);
 
             return View(model);
         }
@@ -156,14 +156,44 @@ namespace HouseRentingSysterm.Controllers
         [HttpGet]
         public async Task<IActionResult> Delete(int id)
         {
-            var model = new HouseDetailsViewModel();
+            if (await houseService.ExistAsync(id) == false)
+            {
+                return BadRequest();
+            }
+
+            if (await houseService.HasAgentWithIdAsync(id, User.Id()) == false)
+            {
+                return Unauthorized();
+            }
+
+            var house = await houseService.HouseDetailsByIdAsync(id);
+
+            var model = new HouseDetailsViewModel()
+            {
+                Id = id,
+                Address = house.Address,
+                ImageUrl = house.ImageUrl,
+                Title = house.Title,
+            };
 
             return View(model);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Delete(int id, HouseDetailsViewModel model)
+        public async Task<IActionResult> Delete(HouseDetailsViewModel model)
         {
+            if (await houseService.ExistAsync(model.Id) == false)
+            {
+                return BadRequest();
+            }
+
+            if (await houseService.HasAgentWithIdAsync(model.Id, User.Id()) == false)
+            {
+                return Unauthorized();
+            }
+
+            await houseService.DeleteAsync(model.Id);
+
             return RedirectToAction(nameof(All));
         }
 
